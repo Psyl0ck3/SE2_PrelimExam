@@ -20,6 +20,8 @@ CREATE TABLE doctors (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+
+
 CREATE TABLE appointments (
     appointment_id INT PRIMARY KEY,
     patient_id INT NOT NULL,
@@ -28,7 +30,7 @@ CREATE TABLE appointments (
     appointment_time TIME NOT NULL,
     reason VARCHAR(255),
     status VARCHAR(50), 
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE procedures (
@@ -43,7 +45,7 @@ CREATE TABLE appointment_procedures (
     appointment_procedure_id INT AUTO_INCREMENT PRIMARY KEY,
     appointment_id INT NOT NULL,
     procedure_id INT NOT NULL,
-    availed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    availed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE test_results (
@@ -52,7 +54,7 @@ CREATE TABLE test_results (
     result VARCHAR(255),
     result_date DATE,
     comments VARCHAR(255),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE payments (
@@ -61,7 +63,6 @@ CREATE TABLE payments (
     payment_method VARCHAR(50),  
     amount DECIMAL(10, 2),  
     payment_date DATE,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
 
